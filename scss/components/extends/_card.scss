@@ -3,6 +3,9 @@ $card-meta-font-size : $small-font-size !default;
 
 // Extended Card
 .card {
+    &.no-border {
+        @include card-container($border : none);
+    }
     [data-closable] {
         position : relative;
     }
