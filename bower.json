@@ -1,0 +1,22 @@
+{
+  "name": "rescue-foundation",
+  "version": "1.0.0",
+  "authors": [
+    "cameron wiley <cameron@rescueagency.com>"
+  ],
+  "description": "Repo for rescue style guide components",
+  "main": "index.html",
+  "license": "MIT",
+  "dependencies": {
+    "foundation-sites": "~6.4.0",
+    "motion-ui": "~1.2.3"
+  },
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "private": false
+}

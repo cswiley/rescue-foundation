@@ -1,0 +1,85 @@
+$card-meta-color : $dark-gray !default;
+$card-meta-font-size : $small-font-size !default;
+
+// Extended Card
+.card {
+    [data-closable] {
+        position : relative;
+    }
+
+    &.shadow {
+        box-shadow : $prototype-box-shadow;
+    }
+
+    .card-header,
+    .card-footer {
+        @include card-divider($background : #f7f7f9);
+    }
+
+    .card-footer {
+        border-top : $card-border;
+    }
+
+    .card-header,
+    .card-footer,
+    .card-divider {
+        padding-top    : $card-padding;
+        padding-bottom : $card-padding;
+        border-bottom  : $card-border;
+
+        &:last-child {
+            border-bottom : none;
+        }
+        &.expanded {
+            padding : 0;
+        }
+
+        > .button:last-child {
+            margin : $button-margin;
+        }
+
+    }
+
+    .card-section {
+        > .button:last-child {
+            margin : $button-margin;
+        }
+
+        &.divider {
+            border-bottom : $card-border;
+        }
+    }
+
+    .meta {
+        color         : $card-meta-color;
+        font-size     : $card-meta-font-size;
+        margin-bottom : 5px;
+    }
+
+    .button {
+        display : inline-block;
+        //vertical-align: middle;
+    }
+
+    &.card-inverse {
+        @each $name, $color in $foundation-palette {
+            &.#{$name} {
+                background-color : $color;
+                color            : color-pick-contrast($color);
+
+                a {
+                    color : color-pick-contrast($color);
+                }
+            }
+        }
+    }
+
+    &.card-outline {
+        @each $name, $color in $foundation-palette {
+            &.#{$name} {
+                border-color     : $color;
+                background-color : transparent;
+            }
+        }
+    }
+}
