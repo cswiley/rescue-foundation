@@ -1,0 +1,13 @@
+.row {
+    &.column {
+        &.centered {
+            @include grid-column-position(center);
+            margin-left: auto !important;
+            margin-right: auto !important;
+        }
+    }
+
+}
+
+
+

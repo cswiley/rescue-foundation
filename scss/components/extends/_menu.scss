@@ -1,0 +1,49 @@
+$menu-item-color: white;
+$menu-item-color-secondary: $muted-color;
+$menu-icon-hover-color: $secondary-color !default;
+$menu-icon-active-color: $secondary-color !default;
+
+.list {
+    @extend .menu;
+}
+
+.list {
+    a {
+        color : $menu-item-color-secondary;
+        @include breakpoint(medium) {
+            color : $menu-item-color;
+        }
+    }
+}
+
+.list {
+    &.menu-icon-hover {
+        li:hover {
+            &, span, i {
+                color: $menu-icon-hover-color;
+            }
+        }
+    }
+}
+
+// style to fix AK's local
+.list {
+    li {
+        display: table-cell;
+        vertical-align: middle;
+
+        a {
+            display: block;
+            padding: 0.2rem 1rem;
+            line-height: 1;
+
+            @include breakpoint(medium) {
+                padding: 0.2rem 1.6rem;
+            }
+
+            img {
+                vertical-align: middle;
+            }
+        }
+    }
+}

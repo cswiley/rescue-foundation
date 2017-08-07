@@ -1,0 +1,19 @@
+.label {
+    width: auto;
+    //text-transform: uppercase;
+
+    &.expanded {
+        width: 100%;
+    }
+}
+
+.label {
+    @each $name, $size in $button-sizes {
+        &.#{$name} {
+            font-size: $size;
+        }
+
+    }
+
+
+}
