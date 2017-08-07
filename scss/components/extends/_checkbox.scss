@@ -1,0 +1,18 @@
+.checkbox {
+    > label {
+        margin-bottom : 5px;
+        text-align    : left;
+        display       : block;
+        line-height   : 1.2;
+        margin-left   : 20px;
+        display:table;
+        input {
+            line-height : 1.2;
+            margin-left : -20px;
+            //float       : left;
+            margin-top  : -2px;
+            display:table-cell;
+            vertical-align: text-top;
+        }
+    }
+}

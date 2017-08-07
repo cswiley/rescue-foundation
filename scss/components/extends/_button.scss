@@ -1,0 +1,55 @@
+$facebook-blue : #3B5998 !default;
+$twitter-blue : #1DA1F2 !default;
+
+.button {
+    &.icon {
+        @extend .button.clear;
+        //background:transparent;
+        padding: 0;
+    }
+}
+
+// Brand Buttons
+.button {
+    &.facebook {
+        background-color : $facebook-blue;
+    }
+    &.twitter {
+        background-color : $twitter-blue;
+    }
+
+}
+
+.button {
+    &.secondary {
+        color : white;
+        &:hover {
+            color : white;
+        }
+    }
+}
+
+.button {
+    text-transform : uppercase;
+}
+
+.button {
+    &.inverse {
+        @each $name, $color in $foundation-palette {
+            &.#{$name} {
+                border: color-pick-contrast($color);
+                color: color-pick-contrast($color);
+            }
+        }
+    }
+
+    &.bordered {
+        @each $name, $color in $foundation-palette {
+            &.#{$name} {
+                border: 1px solid color-pick-contrast($color);
+            }
+        }
+
+    }
+}
+

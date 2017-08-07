@@ -1,0 +1,54 @@
+
+.input-group {
+    .input-group-label {
+
+        &.clear {
+            background-color : transparent;
+        }
+    }
+
+    &.icon {
+        position:relative;
+        span.input-group-label {
+            border:none;
+            position:absolute;
+            padding: 10px 20px;
+        }
+        input {
+            padding-left: 45px;
+            &::placeholder {
+                text-align:left;
+            }
+        }
+    }
+}
+
+input {
+    &.large {
+        font-size: $input-font-size * 1.5;
+        padding: $input-padding * 3 $input-padding;
+    }
+
+    &.auto {
+        width: auto;
+        max-width: 100%;
+    }
+}
+
+input {
+    @each $name, $color in $foundation-palette {
+        &.#{$name} {
+            border: none;
+            background-color: scale-color($color, $lightness : 15%);
+            color: color-pick-contrast($color);
+            &::placeholder {
+                color: transparentize($white, .6);
+            }
+
+            &:focus {
+                border: none;
+                background-color: scale-color($color, $lightness: 20%);
+            }
+        }
+    }
+}
